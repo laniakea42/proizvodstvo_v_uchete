@@ -1,0 +1,109 @@
+.call--btn {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(227.42deg, #FFCB35 -0.34%, #FFCB35 -0.33%, #FF7949 55.41%, #FF0066 99.7%);
+    font-family: 'FontAwesome';
+    border-radius: 100%;
+    text-decoration: none !important;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    outline: none !important;
+    z-index: 99;
+
+    &:hover i {
+        animation-name: phone;
+        animation-iteration-count: 1;
+        animation-duration: 0.7s;
+    }
+
+    i {
+        display: block;
+        font-size: 35px;
+        color: #fff;
+    }
+
+    &:after,
+    &:before {
+        content: '';
+        width: 90%;
+        height: 90%;
+        background-color: transparent;
+        border: 1px solid #FFCB35;
+        position: absolute;
+        top: 2/5%;
+        left: 2/5%;
+        border-radius: 100%;
+        animation-iteration-count: infinite;
+        animation-duration: 1.2s;
+        animation-name: ring;
+        outline: none;
+    }
+
+    &:after {
+        animation-delay: 0.6s;
+    }
+
+    &:before {
+        animation-delay: 0.8s;
+        border: 1px solid #FFCB35;
+    }
+
+    @media screen and (max-width: 1440px) {
+        margin-right: 0;
+        right: 35px;
+        bottom: 75px;
+    }
+
+    @media screen and (max-width: 991px) {
+        width: 50px;
+        height: 50px;
+        right: 25px;
+        bottom: 70px;
+
+        i {
+            font-size: 24px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        bottom: 50px;
+    }
+}
+
+@keyframes ring {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.1;
+        transform: scale(1.7);
+    }
+}
+
+@keyframes phone {
+    20% {
+        transform: rotate(-30deg);
+    }
+
+    80% {
+        transform: rotate(390deg)
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* modal */
+
+/* page content */
